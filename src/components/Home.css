@@ -1,0 +1,124 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Home page container */
+.home {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8f9fa; /* Light background for the page */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Title styles */
+.home-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #2c3e50; /* Darker text color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the title */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Title hover effect */
+.home-title:hover {
+  color: #1abc9c; /* Change color on hover */
+}
+
+/* Image container styles */
+.home-image-container {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+/* Image styles */
+.home-image {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow around the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for image */
+}
+
+/* Image hover effect */
+.home-image:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Description text styles */
+.home-description {
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  color: #34495e; /* Darker color for description */
+  line-height: 1.6;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Description hover effect */
+.home-description:hover {
+  color: #1abc9c; /* Change text color on hover */
+}
+
+/* Button container styles */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* More spacing between buttons */
+  margin-top: 30px;
+}
+
+/* Button styles */
+.home-btn {
+  padding: 12px 25px;
+  background-color: #3498db; /* Blue background for buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease; /* Smooth transition for button effects */
+  color: white;
+  font-weight: bold;
+}
+
+/* Button link styles */
+.home-btn a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* Button hover effect */
+.home-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-5px); /* Lift the button slightly */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Button active (click) effect */
+.home-btn:active {
+  background-color: #1abc9c; /* Change color on click */
+  transform: translateY(2px); /* Press the button down */
+}
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2em; /* Adjust title size for mobile */
+  }
+
+  .home-image {
+    width: 250px; /* Adjust image size for mobile */
+  }
+
+  .home-description {
+    font-size: 1.1em; /* Adjust description size for mobile */
+  }
+
+  .home-btn {
+    padding: 10px 20px;
+    font-size: 1em; /* Adjust button size for mobile */
+  }
+}

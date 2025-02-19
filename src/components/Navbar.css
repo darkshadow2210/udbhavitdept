@@ -1,0 +1,193 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif; /* Apply Helvetica font */
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Align left and right items */
+    align-items: center;
+    background-color: #2191d7; /* Updated background color (turquoise green) */
+    padding: 20px 30px; /* Spacious padding */
+    border: none;
+    position: relative;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .navbar:hover {
+    background-color: #2191d7; /* Darken the navbar on hover for a cool effect */
+  }
+  
+  /* Navbar logo and title */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between logo and title */
+  }
+  
+  .navbar-logo {
+    width: 50px; /* Adjust size of the logo */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth logo transformation */
+  }
+  
+  .navbar-logo:hover {
+    transform: rotate(360deg); /* Rotate logo on hover for a fun effect */
+  }
+  
+  .navbar-title {
+    color: #ecf0f1; /* Lighter color for the title */
+    font-size: 2.2em; /* Increase title size */
+    font-weight: bold;
+    letter-spacing: 1px; /* Slightly space out letters for a modern look */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .navbar-title:hover {
+    color: #f39c12; /* Change color to yellow on hover */
+  }
+  
+  /* Navbar links */
+  .navbar-right {
+    flex: 2; /* Right section takes more space */
+  }
+  
+  .navbar-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    gap: 35px; /* Space out the links */
+  }
+  
+  .navbar-link {
+    color: #ecf0f1; /* Light color for links */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 20px;
+    font-size: 1.2em; /* Increase font size for better readability */
+    border-radius: 5px; /* Smooth corners */
+    transition: all 0.3s ease; /* Smooth transition effect for links */
+  }
+  
+  .navbar-link:hover {
+    background-color: #f39c12; /* Yellow background on hover */
+    color: white; /* Change text color to white on hover */
+    transform: translateY(-5px); /* Slightly lift the link on hover */
+  }
+  
+  .navbar-link:active {
+    background-color: #e67e22; /* Slightly darker yellow when clicked */
+    transform: translateY(2px); /* Give a pressed effect when clicked */
+  }
+  
+  /* Hamburger icon styles */
+  .hamburger {
+    display: none; /* Initially hidden on large screens */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 100; /* Ensure it stays on top */
+  }
+  
+  .bar {
+    background-color: #ecf0f1;
+    width: 100%;
+    height: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger .bar.active:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 7px;
+  }
+  
+  .hamburger .bar.active:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger .bar.active:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -7px;
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack navbar items vertically */
+      align-items: center; /* Center align the items */
+      padding: 15px 25px; /* Adjust padding for smaller screens */
+      background-color: #2191d7; /* Darken the navbar when collapsed */
+    }
+  
+    .navbar-left {
+      flex-direction: column; /* Stack logo and title vertically */
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .navbar-title {
+      font-size: 1.8em; /* Adjust title size for smaller screens */
+    }
+  
+    .navbar-right {
+      width: 100%; /* Make the right section take up full width */
+      display: flex;
+      justify-content: center; /* Center the navbar links */
+      margin-top: 10px; /* Add space above the links */
+    }
+  
+    .navbar-list {
+      flex-direction: column; /* Stack links vertically */
+      gap: 15px; /* Space out the links vertically */
+      align-items: center; /* Center align the links */
+      display: none; /* Hide links by default */
+      width: 100%;
+      transition: all 0.3s ease; /* Smooth transition for showing links */
+    }
+  
+    .navbar-list.active {
+      display: flex; /* Show links when active */
+      opacity: 1; /* Make links fully visible */
+      transform: translateY(0); /* Slide in links */
+    }
+  
+    .navbar-link {
+      padding: 12px 25px; /* Adjust padding for mobile */
+      font-size: 1.3em; /* Increase font size */
+    }
+  
+    .hamburger {
+      display: flex; /* Show hamburger on small screens */
+    }
+  
+    .hamburger:hover {
+      transform: scale(1.1); /* Slightly enlarge hamburger icon on hover */
+    }
+  }
+  
+  /* Mobile responsiveness for very small screens */
+  @media (max-width: 480px) {
+    .navbar-title {
+      font-size: 1.5em; /* Further reduce title size for very small screens */
+    }
+  
+    .navbar-logo {
+      width: 35px; /* Reduce logo size for very small screens */
+    }
+  
+    .navbar-link {
+      font-size: 1.1em; /* Adjust link font size for smaller screens */
+      padding: 10px 20px; /* Adjust padding for mobile */
+    }
+  }
+  
