@@ -31,8 +31,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px; /* Space between text and cards */
-  animation: blink-pop 1.5s infinite alternate ease-in-out;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Glow effect */
 }
 
 /* Card collection centered below text */
