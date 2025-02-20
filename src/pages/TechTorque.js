@@ -32,6 +32,7 @@ function TechTorque() {
   return (
     <div className="tech-torque">
       <h1>Tech Torque Leaderboard</h1>
+      <h3 style={{marginTop: '10px'}}>Venue: IT Block, S201 Lab</h3>
       <table className="leaderboard-table">
         <thead>
           <tr>

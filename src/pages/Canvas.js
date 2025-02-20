@@ -32,6 +32,7 @@ function Canvas() {
   return (
     <div className="tech-torque">
       <h1>Canvas Leaderboard</h1>
+      <h3 style={{marginTop: '10px'}}>Venue: IT Block, S203 Classroom</h3>
       <table className="leaderboard-table">
         <thead>
           <tr>

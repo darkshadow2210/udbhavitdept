@@ -32,6 +32,7 @@ function LockNKey() {
   return (
     <div className="tech-torque">
       <h1>Lock N Key Leaderboard</h1>
+      <h3 style={{marginTop: '10px'}}>Venue: C Block, C201 Lab</h3>
       <table className="leaderboard-table">
         <thead>
           <tr>

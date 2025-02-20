@@ -32,11 +32,12 @@
 .home-image-container {
   margin-bottom: 30px;
   transition: transform 0.3s ease; /* Smooth transform effect */
+  margin-top: 50px;
 }
 
 /* Image styles */
 .home-image {
-  width: 300px;
+  width: 430px; /* Increased width */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow around the image */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for image */
@@ -51,10 +52,10 @@
 /* Description text styles */
 .home-description {
   font-size: 1.3em;
-  margin-bottom: 40px;
   color: #34495e; /* Darker color for description */
   line-height: 1.6;
   transition: color 0.3s ease; /* Smooth color transition */
+  margin-top: 30px;
 }
 
 /* Description hover effect */
@@ -120,5 +121,96 @@
   .home-btn {
     padding: 10px 20px;
     font-size: 1em; /* Adjust button size for mobile */
+  }
+}
+
+/* New heading styles */
+.discount-heading {
+  font-size: 2em;
+  margin-top: 40px;
+  color: #2c3e50; /* Darker text color */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Cards container styles */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* More spacing between cards */
+  margin-top: 30px;
+}
+
+/* Individual card styles */
+.card {
+  width: 350px; /* Increased width of the card */
+  height: 500px; /* Increased height to accommodate both image and description */
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for cards */
+  overflow: hidden; /* Ensure that content does not overflow */
+  transition: transform 0.3s ease; /* Smooth transform effect */
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  align-items: center;
+  padding: 10px; /* Added padding */
+  text-align: center;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Card image styles */
+.card-image {
+  width: 100%; /* Take full width of the card */
+  height: 70%; /* Adjust the height of the image to fit properly */
+  object-fit: cover; /* Ensure image covers the space properly */
+  border-radius: 10px;
+}
+
+/* Card title styles */
+.card-title {
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+  color: #34495e; /* Darker color for the title */
+}
+
+/* Card description styles */
+.card-description {
+  font-size: 1.1em;
+  color: #7f8c8d; /* Lighter color for description */
+  padding: 10px;
+  line-height: 1.6;
+}
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2em; /* Adjust title size for mobile */
+  }
+
+  .home-image {
+    width: 250px; /* Adjust image size for mobile */
+  }
+
+  .home-description {
+    font-size: 1.1em; /* Adjust description size for mobile */
+  }
+
+  .discount-heading {
+    font-size: 1.8em; /* Adjust heading size for mobile */
+  }
+
+  .cards-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Make cards smaller on mobile */
+    margin-bottom: 20px;
   }
 }

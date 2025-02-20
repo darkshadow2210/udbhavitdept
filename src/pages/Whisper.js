@@ -32,6 +32,7 @@ function Whisper() {
   return (
     <div className="tech-torque">
       <h1>Whisper Challenge Leaderboard</h1>
+      <h3 style={{marginTop: '10px'}}>Venue: IT Block, S303 Classroom</h3>
       <table className="leaderboard-table">
         <thead>
           <tr>

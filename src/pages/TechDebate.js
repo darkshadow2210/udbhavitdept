@@ -32,6 +32,7 @@ function TechDebate() {
   return (
     <div className="tech-torque">
       <h1>Tech Debate Leaderboard</h1>
+      <h3 style={{marginTop: '10px'}}>Venue: IT Block, S204 Classroom</h3>
       <table className="leaderboard-table">
         <thead>
           <tr>
