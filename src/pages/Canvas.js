@@ -5,6 +5,12 @@ import './TechTorque.css'
 
 function Canvas() {
   const [leaderboardData, setLeaderboardData] = useState([]);
+
+  // Function to convert time (HH:MM) to minutes
+  const convertTimeToMinutes = (time) => {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;  // Convert to minutes
+  };
   
   // Fetch leaderboard data from Firestore
   useEffect(() => {
@@ -20,7 +26,14 @@ function Canvas() {
           ...doc.data()
         }));
         
-        setLeaderboardData(data);  // Set the data in the state
+        // Sort the data by allocatedTime
+        const sortedData = data.sort((a, b) => {
+          const timeA = convertTimeToMinutes(a.allocatedTime);
+          const timeB = convertTimeToMinutes(b.allocatedTime);
+          return timeA - timeB;  // Ascending order
+        });
+        
+        setLeaderboardData(sortedData);  // Set the sorted data in the state
       } catch (error) {
         console.error('Error fetching leaderboard data:', error);
       }
