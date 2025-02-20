@@ -1,93 +1,109 @@
-/* Technical Page Styles */
-.technical {
-  padding: 40px;
+/* Global Reset */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add a full-page background */
+body {
+  background: url("https://source.unsplash.com/1600x900/?technology,abstract") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Wrapper to center everything */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full viewport height */
+  padding-top: 50px; /* Adjust this value to control spacing from navbar */
+}
+
+/* Animated Text */
+.animated-text {
+  padding-top: 130px;
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: #d67200; /* Bright text color */
   text-align: center;
-  background-color: #f4f6f8; /* Light background */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  text-transform: uppercase;
+  margin-bottom: 30px; /* Space between text and cards */
+  animation: blink-pop 1.5s infinite alternate ease-in-out;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Glow effect */
 }
 
-.technical-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #34495e; /* Darker text color */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for title */
-  transition: color 0.3s ease; /* Smooth color transition */
+/* Card collection centered below text */
+.card__collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Space between cards */
+  padding: 40px; /* Space inside container */
 }
 
-.technical-title:hover {
-  color: #1abc9c; /* Change title color on hover */
+/* Wrapper for each card and its name */
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.technical-description {
-  font-size: 1.3em;
-  margin-bottom: 40px;
-  color: #34495e; /* Darker description text */
-  line-height: 1.6;
-  transition: color 0.3s ease;
-}
-
-.technical-description:hover {
-  color: #1abc9c; /* Change description color on hover */
-}
-
-/* Button Container */
-.technical-buttons {
+/* Card styling */
+.cards {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-  flex-wrap: wrap; /* Allow buttons to wrap when screen size is small */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Button Styles */
-.technical-btn {
-  padding: 12px 25px;
-  background-color: #3498db; /* Blue button color */
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1.1em;
-  font-weight: bold;
-  transition: all 0.3s ease; /* Smooth button transition */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for buttons */
-  display: inline-block; /* Make sure the button is treated as a block for spacing */
+/* Hover effect */
+.cards:hover {
+  transform: scale(1.05);
 }
 
-/* Button Hover Effect */
-.technical-btn:hover {
-  background-color: #2980b9; /* Darker blue on hover */
-  transform: translateY(-5px); /* Lift the button on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+/* Ensuring images maintain aspect ratio and fit */
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* Button Active Effect */
-.technical-btn:active {
-  background-color: #1abc9c; /* Change to teal on click */
-  transform: translateY(2px); /* Press down effect */
+/* Card name below the card */
+.card-name {
+  margin-top: 10px; /* Space between image and name */
+  font-size: 1.6rem; /* Adjust the font size */
+  padding-top: 10px;
+  font-weight: bolder;
+  color: #000000; /* White color for the text */
+  text-align: center;
+  text-transform: uppercase; /* Make the name uppercase */
+  letter-spacing: 1px; /* Slight letter spacing for better readability */
 }
 
-/* Media Query for Smaller Screens (Mobile) */
-@media (max-width: 768px) {
-  .technical-title {
-    font-size: 2em; /* Adjust title size for mobile */
+/* Blinking Text Animation */
+@keyframes blink-pop {
+  0% {
+    opacity: 0.2;
   }
-
-  .technical-description {
-    font-size: 1.1em; /* Adjust description size for mobile */
+  50% {
+    opacity: 1;
   }
-
-  .technical-btn {
-    padding: 10px 20px;
-    font-size: 1em; /* Adjust button size for mobile */
-    width: 100%; /* Make buttons full-width on mobile */
-    max-width: 300px; /* Limit max width */
-    margin: 10px 0; /* Add vertical spacing between buttons */
-  }
-
-  /* Stack buttons vertically in mobile view */
-  .technical-buttons {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center-align the buttons */
-    gap: 15px; /* Add some space between buttons */
+  100% {
+    opacity: 0.2;
   }
 }
