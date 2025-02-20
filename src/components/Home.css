@@ -193,7 +193,7 @@
   }
 
   .home-image {
-    width: 250px; /* Adjust image size for mobile */
+    width: 320px; /* Adjust image size for mobile */
   }
 
   .home-description {
@@ -210,7 +210,8 @@
   }
 
   .card {
-    width: 90%; /* Make cards smaller on mobile */
+    width: 105%; /* Increased width of cards on mobile */
     margin-bottom: 20px;
+    height: 650px; /* Increased the height even more for mobile */
   }
 }
