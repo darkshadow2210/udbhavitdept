@@ -13,7 +13,7 @@ const Technical = () => {
         <div className="card-wrapper">
           <Link to="/techtorque" className="cards cards--one">
             <img
-              src="https://lh4.googleusercontent.com/cHqk6h8uRBQxHwMVXnujSoIIre71giYM053W2mIkyWTbj67Hvolsu37al-C7vikxYtERIxDZmdah43txcig483w=w1280"
+              src=".\tech.png"
               alt="Tech Torque"
               className="card-img"
             />
@@ -25,7 +25,7 @@ const Technical = () => {
         <div className="card-wrapper">
           <Link to="/techdebate" className="cards cards--two">
             <img
-              src="https://lh4.googleusercontent.com/nX0-eXY1qA7oqb4zjOKkv9DhABxa0k12M7EbGTtT6fObx3UkZ0FMYKDjDpVlfzXhQ0tjCsSCrrA0Gb87civCMarzJKCO7VoLNgTdMkxBg1F4N3AjYez4iWrA4ABZZBBJXg=w1280"
+              src=".\debate.jpg"
               alt="Tech Debate"
               className="card-img"
             />
@@ -37,7 +37,7 @@ const Technical = () => {
         <div className="card-wrapper">
           <Link to="/locknkey" className="cards cards--three">
             <img
-              src="https://lh3.googleusercontent.com/qHquZc7JT-7MyX-GQiY84zN-E-fUhI6hA7pbjyU0sJRt3sDxv7lx-TFF1KFe0TEKMRmv2VFsQCom3EuxlEVitM4=w1280"
+              src=".\lock.jpg"
               alt="Lock N Key"
               className="card-img"
             />
@@ -49,7 +49,7 @@ const Technical = () => {
         <div className="card-wrapper">
           <Link to="/canvas" className="cards cards--four">
             <img
-              src="https://lh3.googleusercontent.com/VvK13-H8ot8617ec9Ur-2UQwR9xCRY7e5LXgJRVzAkGgoUkva-g_47OBINE4hGpqV9qrbI9awckt_LcOpPUJ9p0=w1280"
+              src=".\canvas.jpg"
               alt="Canvas"
               className="card-img"
             />
