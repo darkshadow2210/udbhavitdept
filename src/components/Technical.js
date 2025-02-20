@@ -13,7 +13,7 @@ const Technical = () => {
         <div className="card-wrapper">
           <Link to="/techtorque" className="cards cards--one">
             <img
-              src="https://lh4.googleusercontent.com/UO2vkJsVJo97Ai7m4PBEgdwTt8-nJVxTgJhLutiA72M9qR1m3PeI7JUEFQxFxrEj1tI9T9PaL_NleTuGJ87Z9aI=w1280"
+              src="https://lh4.googleusercontent.com/cHqk6h8uRBQxHwMVXnujSoIIre71giYM053W2mIkyWTbj67Hvolsu37al-C7vikxYtERIxDZmdah43txcig483w=w1280"
               alt="Tech Torque"
               className="card-img"
             />
