@@ -12,6 +12,7 @@ function Navbar() {
   };
 
   return (
+    <div>
     <nav className="navbar">
       <div className="navbar-left">
         {/* Add logo */}
@@ -38,6 +39,9 @@ function Navbar() {
         <div className={`bar ${isMobile ? "active" : ""}`}></div>
       </div>
     </nav>
+    <marquee behavior="scroll" direction="left">Participants whose payments are failed, their amount will be returned and they can apply for spot registrations.</marquee>
+
+    </div>
   );
 }
 
