@@ -36,7 +36,7 @@ function Canvas() {
       <table className="leaderboard-table">
         <thead>
           <tr>
-            <th>Rank</th>
+          <th>S. No</th>
             <th>Name</th>
             <th>Branch</th>
             <th>Year</th>
