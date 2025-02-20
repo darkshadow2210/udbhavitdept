@@ -13,8 +13,8 @@ const NonTechnical = () => {
         <div className="card-wrapper">
           <Link to="/redlight" className="cards cards--one">
             <img
-              src="https://lh4.googleusercontent.com/iIqGc5X3UgyDfgHm-CTV0xS3WwVeK3XzU3lxZTq0MBQWUjRxjOb5WDgSnmgjuFZaZZIOuBdnD_WI1lkKIZ03zWhQW7uNgmL81CllmpIRwkUlJjcqxjXP2BgfCK6WJDohAA=w1280"
-              alt="Tech Torque"
+              src="./rlgl.jpg"
+              alt="Red Light Green Light"
               className="card-img"
             />
           </Link>
@@ -25,8 +25,8 @@ const NonTechnical = () => {
         <div className="card-wrapper">
           <Link to="/whisperchallenge" className="cards cards--two">
             <img
-              src="https://lh3.googleusercontent.com/SpUN4wMeTLgwvYmJhKn2MBvMr8-oAahQuEi0RjXELvgTS21Rp91zN48tAiDnVcKN3RWGT-Kl1OPuPvqVSm4Rc8RMUpicK6A8OAoTdICT14yAcvodoSCXQBK9FRqfMkzTxA=w1280"
-              alt="Tech Debate"
+              src="wc.jpg"
+              alt="Whisper Challenge"
               className="card-img"
             />
           </Link>
