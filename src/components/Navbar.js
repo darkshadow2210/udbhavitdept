@@ -16,7 +16,11 @@ function Navbar() {
       <div className="navbar-left">
         {/* Add logo */}
         <img src="/Navbarlogo.jpg" alt="Logo" className="navbar-logo" />
-        <h1 className="navbar-title">Udhbhav 2K25 IT Department</h1>
+        
+        {/* Add a link to the Home page */}
+        <Link to="/" className="navbar-title">
+          <h1>Udhbhav 2K25 IT Department</h1>
+        </Link>
       </div>
       
       <div className={`navbar-right ${isMobile ? "active" : ""}`}>

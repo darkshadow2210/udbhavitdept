@@ -40,12 +40,13 @@
   }
   
   .navbar-title {
-    color: #ecf0f1; /* Lighter color for the title */
-    font-size: 2.2em; /* Increase title size */
+    color: #000000; /* Lighter color for the title */
+    font-size: 1em; /* Increase title size */
     font-weight: bold;
     letter-spacing: 1px; /* Slightly space out letters for a modern look */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0); /* Subtle shadow effect */
     transition: color 0.3s ease; /* Smooth color transition */
+    text-decoration: none;
   }
   
   .navbar-title:hover {
@@ -136,7 +137,7 @@
     }
   
     .navbar-title {
-      font-size: 1.8em; /* Adjust title size for smaller screens */
+      font-size: 0.8em; /* Adjust title size for smaller screens */
     }
   
     .navbar-right {
@@ -178,7 +179,7 @@
   /* Mobile responsiveness for very small screens */
   @media (max-width: 480px) {
     .navbar-title {
-      font-size: 1.5em; /* Further reduce title size for very small screens */
+      font-size: 0.8em; /* Further reduce title size for very small screens */
     }
   
     .navbar-logo {
