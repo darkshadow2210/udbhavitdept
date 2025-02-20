@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';  // Import the Firestore instance from firebase.js
 import { collection, query, orderBy, getDocs } from 'firebase/firestore';
-import './TechTorque.css'
+import './TechTorque.css';
 
 function TechTorque() {
   const [leaderboardData, setLeaderboardData] = useState([]);
   
+  // Function to convert time (HH:MM) to minutes
+  const convertTimeToMinutes = (time) => {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;  // Convert to minutes
+  };
+
   // Fetch leaderboard data from Firestore
   useEffect(() => {
     const fetchLeaderboard = async () => {
@@ -19,8 +25,15 @@ function TechTorque() {
           id: doc.id,
           ...doc.data()
         }));
+
+        // Sort the data by allocatedTime
+        const sortedData = data.sort((a, b) => {
+          const timeA = convertTimeToMinutes(a.allocatedTime);
+          const timeB = convertTimeToMinutes(b.allocatedTime);
+          return timeA - timeB;  // Ascending order
+        });
         
-        setLeaderboardData(data);  // Set the data in the state
+        setLeaderboardData(sortedData);  // Set the sorted data in the state
       } catch (error) {
         console.error('Error fetching leaderboard data:', error);
       }

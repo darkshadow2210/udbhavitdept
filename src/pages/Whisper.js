@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';  // Import the Firestore instance from firebase.js
 import { collection, query, orderBy, getDocs } from 'firebase/firestore';
-import './TechTorque.css'
+import './TechTorque.css';
 
 function Whisper() {
   const [leaderboardData, setLeaderboardData] = useState([]);
   
+  // Function to convert time (HH:MM) to minutes
+  const convertTimeToMinutes = (time) => {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;  // Convert to minutes
+  };
+
   // Fetch leaderboard data from Firestore
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        // Get the data from the tech-torque collection, ordered by score
+        // Get the data from the whisper collection, ordered by score
         const q = query(collection(db, 'whisper'), orderBy('score', 'desc'));
         const querySnapshot = await getDocs(q);
         
@@ -19,8 +25,15 @@ function Whisper() {
           id: doc.id,
           ...doc.data()
         }));
+
+        // Sort the data by allocatedTime
+        const sortedData = data.sort((a, b) => {
+          const timeA = convertTimeToMinutes(a.allocatedTime);
+          const timeB = convertTimeToMinutes(b.allocatedTime);
+          return timeA - timeB;  // Ascending order
+        });
         
-        setLeaderboardData(data);  // Set the data in the state
+        setLeaderboardData(sortedData);  // Set the sorted data in the state
       } catch (error) {
         console.error('Error fetching leaderboard data:', error);
       }
@@ -36,7 +49,7 @@ function Whisper() {
       <table className="leaderboard-table">
         <thead>
           <tr>
-          <th>S. No</th>
+            <th>S. No</th>
             <th>Name</th>
             <th>Branch</th>
             <th>Year</th>
