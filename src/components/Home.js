@@ -21,6 +21,13 @@ function Home() {
           </p>
         </div>
         <div className="card">
+          <img src="\FryFiesta.jpg" alt="Stall 1" className="card-image" />
+          <h3 className="card-title">Fry Fiesta</h3>
+          <p className="card-description">
+          Come visit FRY FIESTA for the crispiest, tastiest, fries in campus! Venue: In front of E Block.
+          </p>
+        </div>
+        <div className="card">
           <img src="\VR.jpg" alt="Stall 2" className="card-image" />
           <h3 className="card-title"> VR Gaming Stall</h3>
           <p className="card-description">
